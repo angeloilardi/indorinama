@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 const servicesIcons = [
   {
@@ -271,13 +271,13 @@ export default function Home() {
       <div className="w-[1240px] h-[304px] border border-slate-400 border-opacity-40 mx-auto flex flex-wrap gap-2.5 pl-[100px] items-center py-8">
         {servicesIcons.map((item, i) => {
           return (
-            <div
+            <a href=""
               key={i}
-              className="flex flex-col rounded-lg border border-stone-950 w-[165px] h-[114px] items-center justify-center bg-white"
+              className="flex flex-col rounded-lg border hover:border-stone-950 border-zinc-400 w-[165px] h-[114px] items-center justify-center bg-white"
             >
               <img src={item.icon} alt="" />
               <p className="text-stone-950">{item.text}</p>
-            </div>
+            </a>
           );
         })}
         <div className="w-[165px] h-[114px] bg-gradient-to-b from-stone-950 to-stone-950 rounded-xl border border-zinc-700 justify-around flex flex-col items-center">
