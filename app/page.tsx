@@ -271,7 +271,8 @@ export default function Home() {
       <div className="w-[1240px] h-[304px] border border-slate-400 border-opacity-40 mx-auto flex flex-wrap gap-2.5 pl-[100px] items-center py-8">
         {servicesIcons.map((item, i) => {
           return (
-            <a href=""
+            <a
+              href=""
               key={i}
               className="flex flex-col rounded-lg border hover:border-stone-950 border-zinc-400 w-[165px] h-[114px] items-center justify-center bg-white"
             >
@@ -507,7 +508,7 @@ export default function Home() {
 
       {/* What our clients say */}
       <section>
-        <div className="mx-auto text-center mt-5 mb-16">
+        <div className="mx-auto text-center mt-9 mb-10">
           <div className="w-1.5 h-[35px] bg-stone-950 rounded-tr-md rounded-br-md inline-block mr-1.5 align-middle" />
           <h3 className="inline-block align-middle text-stone-950 text-[32px] font-medium">
             What Our Clients Say
@@ -520,7 +521,9 @@ export default function Home() {
             alt=""
             className="absolute -left-7 top-1/2"
           />
-          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow flex flex-col items-start px-9 py-5">
+
+          {/* Testimonila card 1 */}
+          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow-[10px_10px_30px_0_rgba(0,0,0,0.1)] flex flex-col items-start px-9 py-5">
             <img src="/images/unnamed.svg" alt="" />
             <p className=" text-stone-950 text-[11.4px] font-medium mt-2.5">
               Cashify has been a Fantastic Startup that has brought so much
@@ -547,7 +550,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow flex flex-col items-start px-9 py-5">
+
+          {/* testimonaila card 2 */}
+          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow-[10px_10px_30px_0_rgba(0,0,0,0.1)] flex flex-col items-start px-9 py-5">
             <img src="/images/unnamed.svg" alt="" />
             <p className=" text-stone-950 text-[11.4px] font-medium mt-2.5">
               Cashify has been a Fantastic Startup that has brought so much
@@ -574,7 +579,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow flex flex-col items-start px-9 py-5">
+
+          {/* testimonaila card 3 */}
+          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow-[10px_10px_30px_0_rgba(0,0,0,0.1)] flex flex-col items-start px-9 py-5">
             <img src="/images/unnamed.svg" alt="" />
             <p className=" text-stone-950 text-[11.4px] font-medium mt-2.5">
               Cashify has been a Fantastic Startup that has brought so much
@@ -601,7 +608,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow flex flex-col items-start px-9 py-5">
+
+          {/* testimonaila card 4 */}
+          <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow-[10px_10px_30px_0_rgba(0,0,0,0.1)] flex flex-col items-start px-9 py-5">
             <img src="/images/unnamed.svg" alt="" />
             <p className=" text-stone-950 text-[11.4px] font-medium mt-2.5">
               Cashify has been a Fantastic Startup that has brought so much
