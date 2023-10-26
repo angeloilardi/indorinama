@@ -274,14 +274,14 @@ export default function Home() {
             <a
               href=""
               key={i}
-              className="flex flex-col rounded-lg border hover:border-stone-950 border-zinc-400 w-[165px] h-[114px] items-center justify-center bg-white"
+              className="flex flex-col rounded-lg border hover:border-stone-950 border-zinc-400 w-[165px] h-[114px] items-center justify-evenly bg-white gap-1.5"
             >
               <img src={item.icon} alt="" />
               <p className="text-stone-950">{item.text}</p>
             </a>
           );
         })}
-        <div className="w-[165px] h-[114px] bg-gradient-to-b from-stone-950 to-stone-950 rounded-xl border border-zinc-700 justify-around flex flex-col items-center">
+        <div className="w-[165px] h-[114px] bg-gradient-to-b from-stone-950 to-stone-950 rounded-xl border border-zinc-700 justify-around flex flex-col items-center py-4">
           <p className="text-center text-white font-medium">View More</p>
           <div className="w-[45px] h-[45px] bg-white rounded-full shadow relative">
             <img
