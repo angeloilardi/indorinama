@@ -77,8 +77,9 @@ const partnerIcons = [
 export default function Home() {
   return (
     <main className="max-w-[1440px]mx-auto bg-neutral-100">
+      {/* Header */}
       <header>
-        <nav className="flex w-full h-[80px] items-center justify-around border-b border-stone-950 border-opacity-10">
+        <nav className="flex max-w-[1240px] h-[80px] items-center justify-around border-b border-stone-950 border-opacity-10 mx-auto">
           <div>
             <h1 className="text-stone-950 text-[28px] font-semibold font-poppins inline-block">
               INDORINAMA
@@ -129,6 +130,8 @@ export default function Home() {
           </div>
         </nav>
       </header>
+
+      {/* Cities */}
       <div className="w-[1013px] h-[139px] bg-white rounded-[20px] border border-stone-950 border-opacity-20 flex items-center mx-auto text-stone-950  justify-evenly">
         <div className="w-[108px] h-28 bg-white rounded flex flex-col gap-1">
           <img
@@ -189,13 +192,29 @@ export default function Home() {
 
           <p>Chennai</p>
         </div>
-        <div className="w-[108px] h-28 bg-stone-950 rounded flex flex-col ">
-          <p>View All Cities</p>
+        <div className=" ">
+          <div className="w-[108px] h-28 bg-stone-950 rounded justify-around flex flex-col items-center py-2">
+            <p className="text-center text-white font-medium">
+              View All Cities
+            </p>
+            <div className="w-[45px] h-[45px] bg-white rounded-full shadow relative">
+              <img
+                src="/images/Arrow - Left.svg"
+                alt=""
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Sell Old Phone */}
-      <div className="w-[1240px] bg-rose-700 rounded-[20px] flex font-poppins px-[89px] justify-between mx-auto">
+      <div className="max-w-[1240px] bg-rose-700 rounded-[20px] flex font-poppins px-[89px] justify-between mx-auto relative">
+        <img
+          src="/images/back-arrow.svg"
+          alt=""
+          className="absolute -left-7 top-1/2"
+        />
         <div className="flex flex-col justify-center w-[446px]">
           <h3 className=" text-white text-[52px] font-semibold mb-3">
             Sell Old Phone
@@ -221,7 +240,14 @@ export default function Home() {
           <img src="/images/ellipse-22.svg" alt="" />
         </div>
         <img src="/images/image 14.png" alt="" className="pt-8" />
+        <img
+          src="/images/next-arrow.svg"
+          alt=""
+          className="absolute -right-7 top-1/2"
+        />
       </div>
+
+      {/* Services banner */}
       <div className="mt-6 mb-4 flex justify-center font-poppins gap-3 items-center">
         <button className=" bg-stone-950 rounded-xl text-center text-white text-base font-semibold  px-4 py-2">
           Designing
@@ -243,11 +269,14 @@ export default function Home() {
 
       {/* Services */}
       <div className="w-[1240px] h-[304px] border border-slate-400 border-opacity-40 mx-auto flex flex-wrap gap-2.5 pl-[100px] items-center py-8">
-        {servicesIcons.map((item) => {
+        {servicesIcons.map((item, i) => {
           return (
-            <div className="flex flex-col rounded-lg border border-stone-950 w-[165px] h-[114px] items-center justify-center bg-white">
+            <div
+              key={i}
+              className="flex flex-col rounded-lg border border-stone-950 w-[165px] h-[114px] items-center justify-center bg-white"
+            >
               <img src={item.icon} alt="" />
-              <p>{item.text}</p>
+              <p className="text-stone-950">{item.text}</p>
             </div>
           );
         })}
@@ -265,6 +294,11 @@ export default function Home() {
 
       {/* Trending Offers */}
       <div className="w-[1240px] h-[337px] relative bg-white border border-slate-400 border-opacity-40 mx-auto">
+        <img
+          src="/images/back-arrow.svg"
+          alt=""
+          className="absolute -left-7 top-1/2"
+        />
         <div className="mx-auto text-center mt-5 mb-12">
           <div className="w-1.5 h-[35px] bg-stone-950 rounded-tr-md rounded-br-md inline-block mr-1.5 align-middle" />
           <h3 className="inline-block align-middle text-stone-950 text-[32px] font-medium">
@@ -372,101 +406,104 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <img
+            src="/images/next-arrow.svg"
+            alt=""
+            className="absolute -right-7 top-1/2"
+          />
         </div>
       </div>
 
       {/* Our Latest Awards */}
-      <div className="mx-auto text-center mt-5 mb-16">
-        <div className="w-1.5 h-[35px] bg-stone-950 rounded-tr-md rounded-br-md inline-block mr-1.5 align-middle" />
-        <h3 className="inline-block align-middle text-stone-950 text-[32px] font-medium">
-          Our Latest Awards
-        </h3>
-      </div>
-
-      <div className="flex max-w-[1240px] relative gap-16 justify-center mx-auto mb-11">
-        {/* Award Symbol 1 */}
-        <img src="/images/x-338-award-symbol.svg" alt="" />
-
-        {/* Award Badge 1 */}
-        <div className="flex flex-col bg-[url('/images/vector-1.svg')] w-[136px] h-[170px] items-center bg-contain bg-no-repeat">
-          <img
-            src="/images/medal.svg"
-            alt=""
-            className="absolute -top-[25px]"
-          />
-          <p className="w-[72px] text-center text-stone-950 text-base font-medium mx-8 mt-8">
-            Best Support
-          </p>
-          <div className="absolute top-[89px] bg-[url('/images/vector-2.svg')] w-[158px] h-[24px] text-center">
-            <p className="text-center text-white text-sm font-medium inline-block">
-              Summer
+      <section>
+        <div className="mx-auto text-center mt-5 mb-16">
+          <div className="w-1.5 h-[35px] bg-stone-950 rounded-tr-md rounded-br-md inline-block mr-1.5 align-middle" />
+          <h3 className="inline-block align-middle text-stone-950 text-[32px] font-medium">
+            Our Latest Awards
+          </h3>
+        </div>
+        <div className="flex max-w-[1240px] relative gap-16 justify-center mx-auto mb-11">
+          {/* Award Symbol 1 */}
+          <img src="/images/x-338-award-symbol.svg" alt="" />
+          {/* Award Badge 1 */}
+          <div className="flex flex-col bg-[url('/images/vector-1.svg')] w-[136px] h-[170px] items-center bg-contain bg-no-repeat">
+            <img
+              src="/images/medal.svg"
+              alt=""
+              className="absolute -top-[25px]"
+            />
+            <p className="w-[72px] text-center text-stone-950 text-base font-medium mx-8 mt-8">
+              Best Support
+            </p>
+            <div className="absolute top-[89px] bg-[url('/images/vector-2.svg')] w-[158px] h-[24px] text-center">
+              <p className="text-center text-white text-sm font-medium inline-block">
+                Summer
+              </p>
+            </div>
+            <p className="text-center text-stone-950 text-xl font-semibold absolute top-[121px]">
+              2023
             </p>
           </div>
-          <p className="text-center text-stone-950 text-xl font-semibold absolute top-[121px]">
-            2023
-          </p>
-        </div>
-
-        {/* Award Badge 2 */}
-
-        <div className="flex flex-col bg-[url('/images/vector-1.svg')] w-[136px] h-[170px] items-center bg-contain bg-no-repeat">
-          <img
-            src="/images/medal.svg"
-            alt=""
-            className="absolute -top-[25px]"
-          />
-          <p className="w-[72px] text-center text-stone-950 text-base font-medium mx-8 mt-8">
-            Best Support
-          </p>
-          <div className="absolute top-[89px] bg-[url('/images/vector-2.svg')] w-[158px] h-[24px] text-center">
-            <p className="text-center text-white text-sm font-medium inline-block">
-              Summer
+          {/* Award Badge 2 */}
+          <div className="flex flex-col bg-[url('/images/vector-1.svg')] w-[136px] h-[170px] items-center bg-contain bg-no-repeat">
+            <img
+              src="/images/medal.svg"
+              alt=""
+              className="absolute -top-[25px]"
+            />
+            <p className="w-[72px] text-center text-stone-950 text-base font-medium mx-8 mt-8">
+              Best Support
+            </p>
+            <div className="absolute top-[89px] bg-[url('/images/vector-2.svg')] w-[158px] h-[24px] text-center">
+              <p className="text-center text-white text-sm font-medium inline-block">
+                Summer
+              </p>
+            </div>
+            <p className="text-center text-stone-950 text-xl font-semibold absolute top-[121px]">
+              2023
             </p>
           </div>
-          <p className="text-center text-stone-950 text-xl font-semibold absolute top-[121px]">
-            2023
-          </p>
-        </div>
-
-        {/* Award Badge 3 */}
-
-        <div className="flex flex-col bg-[url('/images/vector-1.svg')] w-[136px] h-[170px] items-center bg-contain bg-no-repeat">
-          <img
-            src="/images/medal.svg"
-            alt=""
-            className="absolute -top-[25px]"
-          />
-          <p className="w-[72px] text-center text-stone-950 text-base font-medium mx-8 mt-8">
-            Best Support
-          </p>
-          <div className="absolute top-[89px] bg-[url('/images/vector-2.svg')] w-[158px] h-[24px] text-center">
-            <p className="text-center text-white text-sm font-medium inline-block">
-              Summer
+          {/* Award Badge 3 */}
+          <div className="flex flex-col bg-[url('/images/vector-1.svg')] w-[136px] h-[170px] items-center bg-contain bg-no-repeat">
+            <img
+              src="/images/medal.svg"
+              alt=""
+              className="absolute -top-[25px]"
+            />
+            <p className="w-[72px] text-center text-stone-950 text-base font-medium mx-8 mt-8">
+              Best Support
+            </p>
+            <div className="absolute top-[89px] bg-[url('/images/vector-2.svg')] w-[158px] h-[24px] text-center">
+              <p className="text-center text-white text-sm font-medium inline-block">
+                Summer
+              </p>
+            </div>
+            <p className="text-center text-stone-950 text-xl font-semibold absolute top-[121px]">
+              2023
             </p>
           </div>
-          <p className="text-center text-stone-950 text-xl font-semibold absolute top-[121px]">
-            2023
-          </p>
+          {/* Award Symbol 2 */}
+          <img src="/images/vector.svg" alt="" />
         </div>
-
-        {/* Award Symbol 2 */}
-        <img src="/images/vector.svg" alt="" />
-      </div>
+      </section>
 
       {/* Dowmload the app */}
-      <div className="w-[1240px] bg-rose-700 rounded-[20px] font-poppins flex flex-col justify-center items-start pl-24 py-4 mx-auto">
-        <p className="text-white text-[52px] font-semibold mb-5">
-          Download the App
-        </p>
-        <p className="w-[583px] text-white text-xl font-medium mb-6">
-          Sell your old phone | Buy top-qulaity refurbished phones | Get your
-          phone repaired
-        </p>
-        <div className="flex gap-5">
-          <img src="/images/google play.svg" alt="" />
-          <img src="/images/app store.svg" alt="" />
+      <section>
+        <div className="w-[1240px] bg-rose-700 rounded-[20px] font-poppins flex flex-col justify-center items-start pl-24 py-4 mx-auto">
+          <p className="text-white text-[52px] font-semibold mb-5">
+            Download the App
+          </p>
+          <p className="w-[583px] text-white text-xl font-medium mb-6">
+            Sell your old phone | Buy top-qulaity refurbished phones | Get your
+            phone repaired
+          </p>
+          <div className="flex gap-5">
+            <img src="/images/google play.svg" alt="" />
+            <img src="/images/app store.svg" alt="" />
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* What our clients say */}
       <section>
@@ -476,8 +513,13 @@ export default function Home() {
             What Our Clients Say
           </h3>
         </div>
-        <div className="flex max-w-[1240px] mx-auto gap-5">
+        <div className="flex max-w-[1240px] mx-auto gap-5 relative">
           {/* Testimonials */}
+          <img
+            src="/images/back-arrow.svg"
+            alt=""
+            className="absolute -left-7 top-1/2"
+          />
           <div className="w-[294.99px] h-[318px] bg-white rounded-[30px] shadow flex flex-col items-start px-9 py-5">
             <img src="/images/unnamed.svg" alt="" />
             <p className=" text-stone-950 text-[11.4px] font-medium mt-2.5">
@@ -585,6 +627,11 @@ export default function Home() {
                 className="block ml-auto"
               />
             </div>
+            <img
+              src="/images/next-arrow.svg"
+              alt=""
+              className="absolute -right-7 top-1/2"
+            />
           </div>
         </div>
       </section>
@@ -592,7 +639,7 @@ export default function Home() {
       {/* Your Perfect Advertising Partner */}
 
       <section className="w-[1240px] h-[429px] bg-white rounded-[20px] border border-slate-400 border-opacity-40 mx-auto mt-8">
-        <div className="mx-auto text-center mt-5 mb-16">
+        <div className="mx-auto text-center mt-5 mb-6">
           <div className="w-1.5 h-[35px] bg-stone-950 rounded-tr-md rounded-br-md inline-block mr-1.5 align-middle" />
           <h3 className="inline-block align-middle text-stone-950 text-[32px] font-medium">
             Your Perfect Advertising Partner
@@ -606,10 +653,13 @@ export default function Home() {
           the primary goal of assisting our customers in promoting their
           successful brand campaigns.
         </p>
-        <div className="flex gap-5 justify-center">
-          {partnerIcons.map((item) => {
+        <div className="flex gap-5 justify-center my-7">
+          {partnerIcons.map((item, i) => {
             return (
-              <div className="w-[113px] h-[121px] bg-white rounded-md border border-zinc-400 flex flex-col justify-center items-center py-[13px]">
+              <div
+                key={i}
+                className="w-[113px] h-[121px] bg-white rounded-md border border-zinc-400 flex flex-col justify-center items-center py-[13px]"
+              >
                 <img src={item.icon} alt="" />
                 <p className="text-center text-stone-950 text-[11px]">
                   {item.text}
@@ -640,7 +690,7 @@ export default function Home() {
             Our Venture
           </h3>
         </div>
-        <div className="flex w-full my-8 justify-center">
+        <div className="flex w-full my-8 justify-center gap-2.5">
           <a href="" className="w-[90px]">
             <img
               src="/images/81e390941af600e0c1f3328958fee60b (1).png"
@@ -670,9 +720,10 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="w-full bg-stone-950 border-t border-stone-950 border-opacity-10 text-white font-roboto">
+      {/* Footer */}
+      <footer className="w-full bg-stone-950 border-t border-stone-950 border-opacity-10 text-white">
         <div className="flex justify-around max-w-[1440px] pb-20">
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center font-inter">
             <p className="text-white text-base font-normal capitalize leading-relaxed tracking-tight font-inter">
               Lorem Ipsum is simply dummy text of the
               <br />
@@ -713,7 +764,7 @@ export default function Home() {
           </div>
 
           {/* Quick links */}
-          <div className="flex flex-col mt-8 gap-6">
+          <div className="flex flex-col mt-8 gap-6 font-roboto">
             <h3 className="text-2xl font-semibold capitalize">Quick Links</h3>
 
             <a href="" className="capitalize">
@@ -738,7 +789,7 @@ export default function Home() {
           </div>
 
           {/* our offerings */}
-          <div className="flex flex-col mt-8 gap-6">
+          <div className="flex flex-col mt-8 gap-6 font-roboto">
             <h3 className="text-2xl font-semibold capitalize">Our Offerings</h3>
 
             <a href="" className="capitalize">
@@ -764,7 +815,7 @@ export default function Home() {
 
           {/* Contact us */}
 
-          <div className="flex flex-col mt-8 gap-6">
+          <div className="flex flex-col mt-8 gap-6 font-roboto">
             <h3 className="text-2xl font-semibold capitalize">Contact us</h3>
             <div className="flex gap-[15px]">
               <img src="/images/location-svgrepo-com-11.svg" alt="" />
