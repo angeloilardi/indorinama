@@ -537,7 +537,7 @@ export default function Home() {
             <hr className=" w-full border border-stone-950 border-opacity-50"></hr>
             <div className="flex w-full">
               <img className="rounded-full" src="/images/Ellipse 15.svg" />
-              <div className="flex flex-col ml-1">
+              <div className="flex flex-col ml-1 mt-3">
                 <p className=" text-stone-950 text-sm font-medium">Manu Jain</p>
                 <p className="text-zinc-400 text-[9px] font-medium">
                   VP & MD, Xiaomi India
@@ -566,7 +566,7 @@ export default function Home() {
             <hr className=" w-full border border-stone-950 border-opacity-50"></hr>
             <div className="flex w-full">
               <img className="rounded-full" src="/images/Ellipse 15.svg" />
-              <div className="flex flex-col ml-1">
+              <div className="flex flex-col ml-1 mt-3">
                 <p className=" text-stone-950 text-sm font-medium">Manu Jain</p>
                 <p className="text-zinc-400 text-[9px] font-medium">
                   VP & MD, Xiaomi India
@@ -595,7 +595,7 @@ export default function Home() {
             <hr className=" w-full border border-stone-950 border-opacity-50"></hr>
             <div className="flex w-full">
               <img className="rounded-full" src="/images/Ellipse 15.svg" />
-              <div className="flex flex-col ml-1">
+              <div className="flex flex-col ml-1 mt-3">
                 <p className=" text-stone-950 text-sm font-medium">Manu Jain</p>
                 <p className="text-zinc-400 text-[9px] font-medium">
                   VP & MD, Xiaomi India
@@ -624,7 +624,7 @@ export default function Home() {
             <hr className=" w-full border border-stone-950 border-opacity-50"></hr>
             <div className="flex w-full">
               <img className="rounded-full" src="/images/Ellipse 15.svg" />
-              <div className="flex flex-col ml-1">
+              <div className="flex flex-col ml-1 mt-3">
                 <p className=" text-stone-950 text-sm font-medium">Manu Jain</p>
                 <p className="text-zinc-400 text-[9px] font-medium">
                   VP & MD, Xiaomi India
