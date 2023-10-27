@@ -232,9 +232,13 @@ export default function Home() {
 
         <div className="flex gap-3.5 self-end mb-6">
           <img src="/images/ellipse-22.svg" alt="" />
-          {/* <div className="w-[19px] h-[19px] rounded-full border border-white">
-            <img src="/images/ellipse-26.svg" alt="" />
-          </div> */}
+          <div className="w-[19px] h-[19px] rounded-full border border-white flex justify-center items-center">
+            <img
+              src="/images/ellipse-26.svg"
+              alt=""
+              className=""
+            />
+          </div>
           <img src="/images/ellipse-22.svg" alt="" />
           <img src="/images/ellipse-22.svg" alt="" />
           <img src="/images/ellipse-22.svg" alt="" />
@@ -249,20 +253,20 @@ export default function Home() {
 
       {/* Services banner */}
       <div className="mt-6 mb-4 flex justify-center font-poppins gap-3 items-center">
-        <button className=" bg-stone-950 rounded-xl text-center text-white text-base font-semibold  px-4 py-2">
+        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300 hover:bg-stone-950 hover:text-white">
           Designing
         </button>
-        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300">
+        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300 hover:bg-stone-950 hover:text-white">
           Digital Marketing
         </button>
-        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300">
+        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300 hover:bg-stone-950 hover:text-white">
           Printing
         </button>
-        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300">
+        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300 hover:bg-stone-950 hover:text-white">
           Corporate Gifting
         </button>
 
-        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300">
+        <button className="text-stone-950 rounded-xl text-center bg-white text-base font-semibold px-4 py-2 border border-stone-300 hover:bg-stone-950 hover:text-white">
           Packaging
         </button>
       </div>

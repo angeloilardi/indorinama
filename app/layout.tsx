@@ -5,13 +5,13 @@ import './globals.css'
 const inter = Inter({ subsets: ["latin"], variable: "--inter-font" });
 
 const poppins = Poppins({
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--poppins-font",
 });
 
 const roboto = Roboto({
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
   variable: "--roboto-font",
 });
